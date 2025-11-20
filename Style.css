@@ -1,0 +1,437 @@
+
+/* ======= INDEX ======= */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #ffd7e0 0%, #fd7196 70%, #b7385f 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+
+.encabezado {
+    position: sticky;
+    top:0;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    height: 50px;
+    color: #11798b;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(239, 209, 170);
+    width: 100%;
+    padding: 15px 20px;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+   
+}
+
+.encabezado h2:hover {
+    color: #bd3177; 
+    transform: scale(1.05);
+}
+
+
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1; 
+  margin-right: 35px; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: #11798b;
+    transition: all 0.2s ease;
+}
+
+.menu a:hover {
+  color: #bd3177; 
+  transform: scale(1.05);
+}
+
+.titulo-logo{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.titulo-logo img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transition: transform 0.3s ease,box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.titulo-logo img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.contenedor-derecha {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+        
+}
+
+
+.texto-izquierda {
+    font-family:"Luckiest Guy", cursive;
+    font-size: 2.5rem;
+   /* color: #F7E9D7; /* beige claro */
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+    max-width: 50%;
+    animation: fadeIn 2s ease forwards; /* Aparece suavemente */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.fotito-portada2,
+.fotito-portada {
+    display:block;
+    width: 30%;
+    height: auto;
+    border-radius: 20px;
+    margin-left: 15px;
+}
+
+
+@media (max-width: 800px){
+      .titulo{ font-size: 3.2rem; }
+      .fotito-portada{ width: 45%; }
+    }
+
+
+/* ======= SOBRE MI ======= */
+
+.texto-sobre-mi {
+      width: 60%;
+      /*border: 5px solid rgb(11, 113, 117);
+      color: #4a1c34;
+      font-size: 1rem;*/
+      background-color: rgba(243, 243, 232, 0.932); 
+      border: 3px solid rgb(239, 209, 170); 
+      border-radius: 20px; /* bordes redondeados */
+      padding: 25px;  
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* sombrita delicada */
+      /*backdrop-filter: blur(4px); /* efecto de cristal suave (opcional) */
+    }
+
+.texto-sobre-mi:hover {
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+/* ======= GALERIA ======= 
+      width: 90%;
+      padding: 50px 0;*/
+
+.galeria {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 30px;
+      padding: 50px;
+      align-items: start;
+
+    }
+
+    /* width: 500px;
+      height: 700px; */
+    .galeria img {
+      
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .galeria img:hover {  /*transform: scale(1.05);*/
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: #4a1c34;
+      font-size: 4rem;
+      margin: 40px 0 10px 0;
+      text-shadow: 2px 2px 6px rgba(200, 160, 230, 0.6);
+    }
+
+
+  /* ===== FORMULARIO DE CONTACTO ===== */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  height: 300px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fefaf6;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  color: #11798b;
+  font-size: 1rem;
+}
+
+.formulario-contacto label {
+  display: flex;
+  flex-direction: column;
+  font-family: 'DM Serif Text', serif;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  border: 1.5px solid #bd3177;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  resize: none;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.botones button {
+  background-color: #bd3177;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.botones button:hover {
+  background-color: #11798b;
+  transform: scale(1.05);
+}
+
+
+
+ /* ======= CLASES ======= */
+
+.contenedor-clases {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Imagen izquierda | contenido | imagen derecha */
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 80px auto;
+  gap: 40px;
+  
+}
+
+/* ======= CONTENIDO CENTRAL ======= */
+.main-clases {
+  text-align: center;
+  background: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+/* ======= TEXTOS ======= */
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #b0184e;
+  margin-bottom: 10px;
+}
+
+p.subtitle {
+  color: #6b133d;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.section h2 {
+  color: #a80d49;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  color: #3c0420;
+  line-height: 1.7;
+}
+
+.highlight {
+  color: #c21656;
+  font-weight: bold;
+}
+
+p {
+  color: #3c0420;
+  line-height: 1.8;
+}
+
+/* ======= IMÁGENES ======= */
+.img-left,
+.img-right {
+  display: flex;
+  justify-content: center;
+}
+
+.img-left img,
+.img-right img {
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-left img:hover,
+.img-right img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Izquierda */
+.img-left img {
+  width: 380px;
+  height: 400px;
+}
+
+/* Derecha  */
+.img-right img {
+  width: 420px;
+  height: 580px;
+}
+
+
+/* ======= TRABAJOS======= */
+
+.contenedor-trabajos {
+  width: 90%;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.fila-trabajo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+
+.video video {
+  width: 480px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.video video:hover {
+  transform: scale(1.03);
+}
+
+.descripcion {
+  flex: 1;
+  background: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  backdrop-filter: blur(4px);
+  color: #3c0420;
+}
+
+.descripcion h2 {
+  color: #b0184e;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.descripcion p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #3b0a23;
+}
+
+/* Responsive para móviles */
+@media (max-width: 900px) {
+  .fila-trabajo, .fila-trabajo.fila-invertida {
+    flex-direction: column;
+    text-align: center;
+  }
+  .video video {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+
+/* ======= ANIMACIONES ======= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive: 2 columnas en pantallas medianas */
+@media (max-width: 1100px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+}
+
+/* Responsive: 1 columna en móviles */
+@media (max-width: 600px) {
+  .galeria {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 16px;
+  }
+}
+
+
+@media (min-width: 360px){
+      .titulo{ font-size: 3.2rem; }
+      .fotito-portada{ width: 30%; }
+    }
+
+@media (max-width: 600px) {
+  .encabezado {
+    display: none;
+  }
+}
