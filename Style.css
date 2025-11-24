@@ -92,10 +92,9 @@ body {
 .texto-izquierda {
     font-family:"Luckiest Guy", cursive;
     font-size: 2.5rem;
-   /* color: #F7E9D7; /* beige claro */
     text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
     max-width: 50%;
-    animation: fadeIn 2s ease forwards; /* Aparece suavemente */
+    animation: fadeIn 2s ease forwards; 
 }
 
 @keyframes fadeIn {
@@ -124,15 +123,12 @@ body {
 
 .texto-sobre-mi {
       width: 60%;
-      /*border: 5px solid rgb(11, 113, 117);
-      color: #4a1c34;
-      font-size: 1rem;*/
       background-color: rgba(243, 243, 232, 0.932); 
       border: 3px solid rgb(239, 209, 170); 
-      border-radius: 20px; /* bordes redondeados */
+      border-radius: 20px; 
       padding: 25px;  
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* sombrita delicada */
-      /*backdrop-filter: blur(4px); /* efecto de cristal suave (opcional) */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+      
     }
 
 .texto-sobre-mi:hover {
@@ -144,8 +140,7 @@ body {
 
 
 /* ======= GALERIA ======= 
-      width: 90%;
-      padding: 50px 0;*/
+      */
 
 .galeria {
       display: grid;
@@ -156,8 +151,7 @@ body {
 
     }
 
-    /* width: 500px;
-      height: 700px; */
+   
     .galeria img {
       
       width: 100%;
@@ -168,7 +162,7 @@ body {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .galeria img:hover {  /*transform: scale(1.05);*/
+    .galeria img:hover {  
       transform: translateY(-6px) scale(1.02);
       box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
@@ -188,8 +182,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px;
-  height: 300px;
+  max-width: 600px;
+  height: 400px;
   margin: 60px auto;
   padding: 30px;
   background-color: #fefaf6;
@@ -243,7 +237,7 @@ body {
 
 .contenedor-clases {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr; /* Imagen izquierda | contenido | imagen derecha */
+  grid-template-columns: 1fr 2fr 1fr;
   justify-content: center;
   align-items: center;
   width: 90%;
@@ -388,7 +382,7 @@ p {
   color: #3b0a23;
 }
 
-/* Responsive para móviles */
+
 @media (max-width: 900px) {
   .fila-trabajo, .fila-trabajo.fila-invertida {
     flex-direction: column;
@@ -407,7 +401,7 @@ p {
   to { opacity: 1; }
 }
 
-/* Responsive: 2 columnas en pantallas medianas */
+
 @media (max-width: 1100px) {
   .galeria {
     grid-template-columns: repeat(2, 1fr);
@@ -415,7 +409,7 @@ p {
   }
 }
 
-/* Responsive: 1 columna en móviles */
+
 @media (max-width: 600px) {
   .galeria {
     grid-template-columns: 1fr;
