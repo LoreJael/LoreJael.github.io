@@ -35,20 +35,26 @@
     <h1 class="titulo"> Envíame un mensaje</h1>
     
 
-    <form class="formulario-contacto">
+    <form class="formulario-contacto"
+    action="https://aterbonus.dev/api/toys/forms"
+    method="post">
       <label>
         Nombre:
-        <input type="text" name="nombre" required minlength="4" maxlength="100">
+        <input type="text" name="name" required minlength="4" maxlength="200">
       </label>
 
       <label>
         E-mail:
-        <input type="email" name="email" required maxlength="120">
+        <input type="email" name="email" required maxlength="200">
+      </label>
+      <label>
+        Asunto:
+        <input type="text" name="subject" required maxlength="200">
       </label>
 
       <label>
-        Mensaje:
-        <textarea name="mensaje" rows="5" required></textarea>
+        Contenido:
+        <textarea name="content" maxlength="1000" required></textarea>
       </label>
 
       <div class="botones">
