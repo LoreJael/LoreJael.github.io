@@ -584,3 +584,9 @@ p {
   z-index: 100;
 }
 
+@media (min-width: 601px) {
+  .hamburger,
+  .menu-movil {
+    display: none;
+  }
+}
