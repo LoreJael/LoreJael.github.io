@@ -22,26 +22,44 @@
     <link href="Tienda.html">
 </head>
 
-
 <body>
 
-    <a href="index.html" class="titulo-logo">
-  <img src="./vertical.png" alt="Logo Fairy Pole - volver al inicio">
-</a>
-<header class ="encabezado"> 
+<div class="logo-titulo">
+    <a href="Index.html" class="titulo-logo">
+        <img src="./vertical.png" alt="Logo Fairy Pole - volver al inicio">
+    </a>
+    <h1 class="titulo-principal"> Bienvenida a Fairy Pole</h1>
+</div>
 
-    <h1 class="titulo">Bienvenido a Fairy Pole</h1>
-    
-   <nav class="menu"> 
-        <h2><a href="index.html"> Inicio </a></h2>
-        <h2> <a href="Sobremi.html"> Sobre Mi </a> </h2>
-        <h2> <a href= "Clases.html" > Clases </a> </h2>
-        <h2> <a href="Tienda.html">  Tienda </a> </h2>
-        <h2> <a href= "Galeria.html"> Galeria de Fotos </a></h2>
-        <h2> <a href="Contacto.html"> Contacto</a></h2>
+<header class="encabezado">
+
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="menu-movil">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="galeria.html">Galería</a>
+        <a href="clases.html">Clases</a>
+        <a href="trabajos.html">Trabajos</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+    <nav class="menu">
+        <h2><a href="index.html">Inicio</a></h2>
+        <h2><a href="Sobremi.html">Sobre Mi</a></h2>
+        <h2><a href="Clases.html">Clases</a></h2>
+        <h2><a href="Tienda.html">Tienda</a></h2>
+        <h2><a href="Galeria.html">Galería</a></h2>
+        <h2><a href="Contacto.html">Contacto</a></h2>
     </nav>
 </header>
+
 <main class=" contenedor-derecha">
+    
     <div class="texto-izquierda"> 
         <p> Aquí florece tu energía </p>
         <p> tu magia y tu poder </p>
@@ -50,5 +68,20 @@
     <img class= fotito-portada src="./Galeria/Pink (2).JPEG" alt="persona realizando una figura de pole dance llamada vuelo con traje de dos piezas azul">
     <img class= fotito-portada2 src="./Galeria/bosqueexo (1).JPEG" alt="sesión fotografica de pole exotic en el bosque, zapatos rojos y traje burdeo, split vertical">
 </main>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const menuMovil = document.querySelector('.menu-movil');
+
+  hamburger.addEventListener('click', () => {
+    menuMovil.classList.toggle('activo');
+  });
+
+  
+  document.querySelectorAll('.menu-movil a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuMovil.classList.remove('activo');
+    });
+  });
+</script>
 </body>
 </html>
